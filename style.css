@@ -11,14 +11,14 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: #000000;
+  background-color: #00000000;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%23434343' fill-opacity='0.4'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   text-align: center;
 }
 
 h2 {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
-  color: #fff;
+  color: #242424;
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
@@ -34,6 +34,7 @@ h2 {
   overflow: hidden;
   padding: 15px;
   position: relative;
+  border: 2px solid #192934;
 }
 
 .chat {
@@ -68,14 +69,14 @@ h2 {
 }
 
 .avatar {
-  border-radius: 50%;
+  border-radius: 60%;
   object-fit: cover;
   position: absolute;
   left: 10px;
   top: -10px;
-  width: 50px;
-  height: 50px;
-  border: 2px solid #b8c4cc;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #b8c4cc;
 }
 
 .message.right .avatar {
@@ -88,12 +89,41 @@ h2 {
   margin: 0;
 }
 
-.text_input {
-  font-size: 1rem;
+.sss {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 10px 15px;
-  width: 100%;
+  padding: 5px 15px;
+  border-top: 1px solid #b8c4cc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text_input {
+  background: linear-gradient(to right, #ece9e6, #ffffff);
+  width: 80%;
+  border: none;
+  outline: none;
+}
+
+button {
+  display: flex;
+  background-color: blue;
+  color: #fff;
+  border-radius: 20px;
+  font-size: 20px;
+  border: none;
+  justify-content: end;
+}
+
+button:active {
+  transform: scale(0);
+  background-color: black;
+  /* rotate: -90deg;
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  border: none; */
+  position: relative;
+  transition: all -0.1s;
 }
